@@ -10,9 +10,11 @@ import { EmployeeService } from './employee.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  public employees: Employee[] = [];
+  title:any = "";
+  public employees: Employee[];
   public editEmployee: Employee;
   public deleteEmployee: Employee;
+  
 
   constructor(private employeeService: EmployeeService){}
 
@@ -120,4 +122,5 @@ export class AppComponent implements OnInit {
     container.appendChild(button);
     button.click();
   }
+
 }
